@@ -1,0 +1,48 @@
+.container {
+    padding: 5%;
+    height: 100%;
+}
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.card {
+    width: 30%;
+}
+.card-header {
+    background: #ffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  span{
+    font-size:26px;
+  }
+}
+.card-title {
+    display: flex;
+    justify-content: center;
+    padding-top: 4%;
+}
+.item {
+    display: flex;
+    flex-direction: column;
+  input{
+    padding: 0.7em;
+  }
+}
+.submit-button {
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  button{
+    background-color:#db202f;
+    width: 0%;
+    color:ghostwhite;
+  }
+}
+.alert-msg {
+    color: #ff0000;
+    font-size: 95%;
+}
+

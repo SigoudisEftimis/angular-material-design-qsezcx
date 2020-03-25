@@ -1,0 +1,42 @@
+<div class="container" fxLayout="row wrap">
+<form  (submit)="login()"
+      class="form"
+      fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center center">
+
+  <mat-card class="card">
+    <mat-card-header class="card-header" fxLayout.gt-xs="row" fxLayout.xs="column">
+      <mat-card-title class="card-title">
+        <div mat-card-avatar>
+          <span>Login</span>
+        </div>
+      </mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div class="alert-msg" [hidden]="!loginError">
+       
+      </div>
+      <div class="alert-msg" [hidden]="!internalServerError">
+       
+      </div>
+      <mat-form-field class="item">
+        <input matInput placeholder="Username"  required>
+        <mat-error *ngIf="loginForm.controls.username.hasError('required')">
+          Please enter your login
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="item">
+        <input type="password" matInput placeholder="Password"  required>
+        <mat-error *ngIf="loginForm.controls.password.hasError('required')">
+          Please enter your password
+        </mat-error>
+      </mat-form-field>
+
+      <div class="submit-button">
+        <button mat-raised-button color="primary" [disabled]="!loginForm.valid">Login</button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</form>
+</div>
